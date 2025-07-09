@@ -106,7 +106,8 @@ void ReadFromFile(StudentRec Student[], int *next)
 		while(infile >> Student[*next].name){
 			infile >>  Student[*next].grade1;
 			infile >> Student[*next].grade2;
-			*(++next);
+			Student[*next].average = (Student[*next].grade1 + Student[*next].grade2)/2;
+			*next = *next + 1;
 			}
 		
 		
@@ -119,13 +120,18 @@ void ReadFromFile(StudentRec Student[], int *next)
 void Search(const StudentRec Student[], int last)
 {
 	char nameSearch[MAXLEN];
+	bool found;
 	cout << "name to search: ";
 	cin >> nameSearch;
 	for(int i = 0; i < last; i++){
-		if(Student[i].name==nameSearch){
+		if(strcmp(Student[i].name,nameSearch)== 0 ){
 			cout << "name is in array!";
-		}else cout << "file is not in array!";
+			found = true;
+			break;
+		}else found = false;
+		
 	}
+	if (!found) cout << "name is not in string!\n";
 	
 }
 
