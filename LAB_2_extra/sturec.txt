@@ -1,0 +1,6 @@
+Mary 90 80
+Jane 67 98
+John 56 78
+Kim 78 67
+Alice 89 90
+Audrey 86 89
