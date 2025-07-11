@@ -131,7 +131,7 @@ void Search(const StudentRec Student[], int last)
 		}else found = false;
 		
 	}
-	if (!found) cout << "name is not in string!\n";
+	if (!found) cout << "name is not in array!\n";
 	
 }
 
